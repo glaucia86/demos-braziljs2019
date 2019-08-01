@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,7 +23,8 @@ import { PalestranteEditComponent } from './palestrante-edit/palestrante-edit.co
     AppRoutingModule,
     SlimLoadingBarModule,
     AngularFontAwesomeModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
