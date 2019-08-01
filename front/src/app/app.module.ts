@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { PalestranteAddComponent } from './palestrante-add/palestrante-add.component';
 import { PalestranteGetComponent } from './palestrante-get/palestrante-get.component';
 import { PalestranteEditComponent } from './palestrante-edit/palestrante-edit.component';
+import { PalestranteService } from './palestrante.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { PalestranteEditComponent } from './palestrante-edit/palestrante-edit.co
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ PalestranteService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
