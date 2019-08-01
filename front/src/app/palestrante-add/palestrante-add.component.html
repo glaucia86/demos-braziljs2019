@@ -29,8 +29,12 @@
             Campo Obrigatório.
           </div>
         </div>
+        <!-- Bloco Fim: Título da Palestra -->
+
         <div class="form-group">
-          <button type="submit" class="btn btn-primary"><fa name="plus"></fa> Palestrante</button>
+          <button (click)="adicionarPalestrante(nomePalestrante.value, tituloPalestra.value)"
+            type="submit" class="btn btn-primary"
+            [disabled]="palestranteForm.pristine || palestranteForm.invalid"><fa name="plus"></fa> Palestrante</button>
         </div>
       </div>
     </form>
