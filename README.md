@@ -53,7 +53,7 @@ Depois bastam abrir o postamn em **localhost:8000** e testar as requisições
 
 E vòilá! :heart: :heart:
 
-## Links & Recursos Importantes ❗️
+## Links & Recursos Importantes ⭐️
 
 Durante a live, comentei sobre importantes documentações, links e recursos que podem auxiliar o seu conhecimento sobre Serverless & Azure Functions
 
