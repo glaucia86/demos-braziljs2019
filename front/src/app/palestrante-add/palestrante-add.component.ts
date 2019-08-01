@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-palestrante-add',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PalestranteAddComponent implements OnInit {
 
-  constructor() { }
+  palestranteForm: FormGroup;
+
+  constructor(private formBuilder: FormBuilder) {
+    this.createForm();
+  }
+
+  createForm() {
+    this.palestranteForm = this.formBuilder.group({
+      nomePalestrante: ['', Validators.required],
+      tituloPalestra: ['', Validators.required]
+    });
+  }
 
   ngOnInit() {
   }
-
 }
