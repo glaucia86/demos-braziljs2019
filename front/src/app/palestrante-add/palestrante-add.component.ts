@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { PalestranteService } from '../palestrante.service';
 
+import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-palestrante-add',
   templateUrl: './palestrante-add.component.html',
@@ -24,6 +26,13 @@ export class PalestranteAddComponent implements OnInit {
 
   adicionarPalestrante(nomePalestrante, tituloPalestra) {
     this.palestranteService.adicionarPalestrante(nomePalestrante, tituloPalestra);
+
+    Swal.fire({
+      title: 'Palestrante criado(a) com Sucesso!',
+      type: 'success',
+      showConfirmButton: true,
+      timer: 1500
+    });
   }
 
   ngOnInit() {
