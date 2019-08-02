@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PalestranteService {
 
-  uri = '/palestrante';
+  // ==> usar a uri da api (Back-End)
+  uri = 'http://localhost:8000/api/palestrante';
 
   constructor(private http: HttpClient) { }
 
@@ -20,7 +21,7 @@ export class PalestranteService {
     };
     console.log(palestrante);
 
-    this.http.post(`${this.uri}/add`, palestrante)
+    this.http.post(`${this.uri}/create`, palestrante)
       .subscribe(res => console.log('Feito'));
   }
 }
