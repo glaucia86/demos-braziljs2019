@@ -7,7 +7,7 @@ import { HttpClient } from '@angular/common/http';
 export class PalestranteService {
 
   // ==> usar a uri da api (Back-End)
-  uri = 'http://localhost:8000/api/palestrante';
+  uri = 'http://localhost:8000/palestrante';
 
   constructor(private http: HttpClient) { }
 
