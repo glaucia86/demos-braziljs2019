@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import Palestrante from '../Palestrante';
+import { PalestranteService } from '../palestrante.service';
 
 @Component({
   selector: 'app-palestrante-get',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PalestranteGetComponent implements OnInit {
 
-  constructor() { }
+  palestrantes: Palestrante[];
+
+  constructor(private palestranteService: PalestranteService) { }
 
   ngOnInit() {
+    this.palestranteService.getPalestrantes().subscribe((data: Palestrante[]) => {
+      this.palestrantes = data;
+    });
   }
 
 }

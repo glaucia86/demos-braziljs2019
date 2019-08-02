@@ -25,4 +25,11 @@ export class PalestranteService {
     this.http.post(`${this.uri}/palestrante`, palestrante)
       .subscribe(res => console.log('Feito'));
   }
+
+  /**
+   * Método responsável por selecionar todos os 'Palestrantes'
+   */
+  getPalestrantes() {
+    return this.http.get(`${this.uri}/palestrantes`);
+  }
 }
