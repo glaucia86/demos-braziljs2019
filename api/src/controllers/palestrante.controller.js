@@ -25,8 +25,8 @@ exports.findAll = async (req, res) => {
 
 // ==> Método responsável por selecionar 'Palestrante' pelo 'Id':
 exports.findById = async (req, res) => {
-  const palestrante = await Palestrante.findById(req.params.id);
-  res.status(200).send(palestrante);
+  const palestranteId = await Palestrante.findById(req.params.id);
+  res.status(200).send(palestranteId);
 };
 
 // ==> Método responsável por atualizar 'Palestrante' pelo 'Id':
