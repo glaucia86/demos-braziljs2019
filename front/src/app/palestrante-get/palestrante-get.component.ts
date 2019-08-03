@@ -26,9 +26,10 @@ export class PalestranteGetComponent implements OnInit {
   /**
    * Método responsável por excluir um 'Palestrante' pelo 'Id'
    */
-  excluirPalestrante(id: number) {
+  excluirPalestrante(id: any) {
     this.palestranteService.excluirPalestrante(id).subscribe(res => {
-      this.palestrantes.splice(id, 1);
+      const index = this.palestrantes.indexOf(id);
+      this.palestrantes.splice(index, 1);
 
       Swal.fire({
         title: 'Você tem certeza que deseja excluir o(a) Palestrante?',
