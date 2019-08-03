@@ -22,7 +22,7 @@ export class PalestranteService {
     console.log(palestrante);
 
     // ==> (POST - Url no Back-End): http://localhost:8000/api/palestrante
-    this.http.post(`${this.uri}/palestrante`, palestrante)
+    this.http.post(`${this.uri}/palestrantes`, palestrante)
       .subscribe(res => console.log('Feito'));
   }
 
@@ -43,7 +43,7 @@ export class PalestranteService {
     // ==> (GET - Url no Back-End): (GET): localhost:8000/api/palestrante/:id
     return this
       .http
-      .get(`${this.uri}/palestrante/${id}`);
+      .get(`${this.uri}/palestrantes/${id}`);
   }
 
   atualizarPalestrante(nomePalestrante, tituloPalestra, id) {
@@ -55,7 +55,7 @@ export class PalestranteService {
     // ==> (PUT - Url no Back-End): (UPDATE): localhost:8000/api/palestrante/:id
     this
       .http
-      .post(`${this.uri}/palestrante/${id}`, palestrante)
+      .post(`${this.uri}/palestrantes/${id}`, palestrante)
       .subscribe(res => console.log('Done!'));
   }
 
@@ -66,6 +66,6 @@ export class PalestranteService {
     // ==> (DELETE - Url no Back-End): (DELETE): localhost:8000/api/palestrante/:id
     return this
       .http
-      .get(`${this.uri}/palestrante/${id}`);
+      .get(`${this.uri}/palestrantes/${id}`);
   }
 }

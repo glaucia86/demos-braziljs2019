@@ -9,19 +9,19 @@
 const router = require('express-promise-router')();
 const palestranteController = require('../controllers/palestrante.controller');
 
-// ==> Rota Criar Novo 'Palestrante': (POST): localhost:8000/api/palestrante/
-router.post('/palestrante', palestranteController.create);
+// ==> Rota Criar Novo 'Palestrante': (POST): localhost:8000/api/palestrantes/
+router.post('/palestrantes', palestranteController.create);
 
 // ==> Rota Selecionar Todos 'Palestrantes': (GET): localhost:8000/api/palestrantes/
 router.get('/palestrantes', palestranteController.findAll);
 
-// ==> Rota Selecionar 'Palestrante' pelo 'Id': (GET): localhost:8000/api/palestrante/:id
-router.get('/palestrante/:id', palestranteController.findById);
+// ==> Rota Selecionar 'Palestrante' pelo 'Id': (GET): localhost:8000/api/palestrantes/:id
+router.get('/palestrantes/:id', palestranteController.findById);
 
-// ==> Rota Atualizar 'Palestrante' pelo 'Id': (UPDATE): localhost:8000/api/palestrante/:id
-router.put('/palestrante/:id', palestranteController.update);
+// ==> Rota Atualizar 'Palestrante' pelo 'Id': (UPDATE): localhost:8000/api/palestrantes/:id
+router.put('/palestrantes/:id', palestranteController.update);
 
-// ==> Rota Deletar 'Palestrante' pelo 'Id': (DELETE): localhost:8000/api/palestrante/:id
-router.delete('/palestrante/:id', palestranteController.delete);
+// ==> Rota Deletar 'Palestrante' pelo 'Id': (DELETE): localhost:8000/api/palestrantes/:id
+router.delete('/palestrantes/:id', palestranteController.delete);
 
 module.exports = router;
