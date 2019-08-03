@@ -33,6 +33,8 @@ export class PalestranteAddComponent implements OnInit {
       showConfirmButton: true,
       timer: 1500
     });
+
+    this.palestranteForm.reset();
   }
 
   ngOnInit() {
