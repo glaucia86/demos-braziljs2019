@@ -7,7 +7,7 @@ import { PalestranteGetComponent } from './palestrante-get/palestrante-get.compo
 const routes: Routes = [
   { path: 'palestrante/create', component: PalestranteAddComponent },
   { path: 'palestrante/:id', component: PalestranteEditComponent },
-  { path: 'palestrante', component: PalestranteGetComponent }
+  { path: 'palestrantes', component: PalestranteGetComponent }
 ];
 
 @NgModule({
