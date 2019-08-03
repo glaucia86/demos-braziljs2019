@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class PalestranteService {
 
-  // ==> usar a uri da api (Back-End)
+  // ==> Uri da api (Back-End)
   uri = 'http://localhost:8000/api';
 
   constructor(private http: HttpClient) { }
@@ -22,7 +22,9 @@ export class PalestranteService {
     console.log(palestrante);
 
     // ==> (POST - Url no Back-End): http://localhost:8000/api/palestrante
-    this.http.post(`${this.uri}/palestrantes`, palestrante)
+    this
+      .http
+      .post(`${this.uri}/palestrantes`, palestrante)
       .subscribe(res => console.log('Feito'));
   }
 
@@ -40,7 +42,7 @@ export class PalestranteService {
    * Método responsável por atualizar o 'Palestrante' pelo 'Id':
    */
   editPalestrante(id) {
-    // ==> (GET - Url no Back-End): (GET): localhost:8000/api/palestrante/:id
+    // ==> (GET by Id- Url no Back-End): (GET): localhost:8000/api/palestrante/:id
     return this
       .http
       .get(`${this.uri}/palestrantes/${id}`);
@@ -52,10 +54,10 @@ export class PalestranteService {
       tituloPalestra
     };
 
-    // ==> (PUT - Url no Back-End): (UPDATE): localhost:8000/api/palestrante/:id
+    // ==> (PUT by Id - Url no Back-End): (UPDATE): localhost:8000/api/palestrante/:id
     this
       .http
-      .post(`${this.uri}/palestrantes/${id}`, palestrante)
+      .put(`${this.uri}/palestrantes/${id}`, palestrante)
       .subscribe(res => console.log('Done!'));
   }
 
@@ -63,9 +65,9 @@ export class PalestranteService {
    * Método responsável por excluir um 'Palestrante' pelo 'Id':
    */
   excluirPalestrante(id) {
-    // ==> (DELETE - Url no Back-End): (DELETE): localhost:8000/api/palestrante/:id
+    // ==> (DELETE by Id - Url no Back-End): (DELETE): localhost:8000/api/palestrante/:id
     return this
       .http
-      .get(`${this.uri}/palestrantes/${id}`);
+      .delete(`${this.uri}/palestrantes/${id}`);
   }
 }

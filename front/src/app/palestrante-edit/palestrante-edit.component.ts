@@ -41,7 +41,7 @@ export class PalestranteEditComponent implements OnInit {
   atualizarPalestrante(nomePalestrante, tituloPalestra, id) {
     this.route.params.subscribe(params => {
       this.palestranteService.atualizarPalestrante(nomePalestrante, tituloPalestra, params.id);
-      this.router.navigate(['palestrantes']);
+      this.router.navigate(['palestrante']);
 
       Swal.fire({
         title: 'Palestrante atualizado(a) com Sucesso!',
