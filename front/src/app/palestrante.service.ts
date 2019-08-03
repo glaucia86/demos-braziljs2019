@@ -52,7 +52,7 @@ export class PalestranteService {
       tituloPalestra
     };
 
-    // ==> (PUT - Url no Back-End): (GET): localhost:8000/api/palestrante/:id
+    // ==> (PUT - Url no Back-End): (UPDATE): localhost:8000/api/palestrante/:id
     this
       .http
       .post(`${this.uri}/palestrante/${id}`, palestrante)
@@ -63,7 +63,7 @@ export class PalestranteService {
    * Método responsável por excluir um 'Palestrante' pelo 'Id':
    */
   excluirPalestrante(id) {
-    // ==> (DELETE - Url no Back-End): (GET): localhost:8000/api/palestrante/:id
+    // ==> (DELETE - Url no Back-End): (DELETE): localhost:8000/api/palestrante/:id
     return this
       .http
       .get(`${this.uri}/palestrante/${id}`);
