@@ -30,6 +30,40 @@ export class PalestranteService {
    * Método responsável por selecionar todos os 'Palestrantes'
    */
   getPalestrantes() {
-    return this.http.get(`${this.uri}/palestrantes`);
+    // ==> (GET - Url no Back-End): http://localhost:8000/api/palestrantes
+    return this
+      .http
+      .get(`${this.uri}/palestrantes`);
+  }
+
+  /**
+   * Método responsável por atualizar o 'Palestrante' pelo 'Id':
+   */
+  editPalestrante(id) {
+    // ==> (PUT - Url no Back-End): http://localhost:8000/api/palestrante/:id
+    return this
+      .http
+      .get(`${this.uri}/palestrante/${id}`);
+  }
+
+  atualizarPalestrante(nomePalestrante, tituloPalestra, id) {
+    const palestrante = {
+      nomePalestrante,
+      tituloPalestra
+    };
+
+    this
+      .http
+      .post(`${this.uri}/palestrante/${id}`, palestrante)
+      .subscribe(res => console.log('Done!'));
+  }
+
+  /**
+   * Método responsável por excluir um 'Palestrante' pelo 'Id':
+   */
+  excluirPalestrante(id: number) {
+    return this
+      .http
+      .get(`${this.uri}/palestrante/${id}`);
   }
 }

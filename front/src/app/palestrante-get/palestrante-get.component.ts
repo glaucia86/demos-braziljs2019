@@ -14,8 +14,19 @@ export class PalestranteGetComponent implements OnInit {
   constructor(private palestranteService: PalestranteService) { }
 
   ngOnInit() {
-    this.palestranteService.getPalestrantes().subscribe((data: Palestrante[]) => {
-      this.palestrantes = data;
+    this.palestranteService
+      .getPalestrantes()
+      .subscribe((data: Palestrante[]) => {
+        this.palestrantes = data;
+    });
+  }
+
+  /**
+   * Método responsável por excluir um 'Palestrante' pelo 'Id'
+   */
+  excluirPalestrante(id) {
+    this.palestranteService.excluirPalestrante(id).subscribe(res => {
+      this.palestrantes.splice(id, 1);
     });
   }
 
