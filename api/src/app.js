@@ -27,7 +27,6 @@ mongoose.connect(database.local.localUrl, { useNewUrlParser: true }).then(() => 
 });
 
 // ==> Rotas
-const index = require('./routes/index');
 const palestranteRoute = require('./routes/palestrante.routes');
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -36,7 +35,6 @@ app.use(bodyParser.json({ type: 'application/vnd.api+json' }));
 app.use(morgan('dev'));
 app.use(cors());
 
-app.use('/', index);
 app.use('/api/', palestranteRoute);
 
 module.exports = app;
