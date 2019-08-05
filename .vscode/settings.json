@@ -1,3 +1,8 @@
 {
-    "workbench.colorCustomizations": {}
+    "workbench.colorCustomizations": {},
+    "azureFunctions.deploySubpath": "serverless-braziljs-api",
+    "azureFunctions.projectLanguage": "JavaScript",
+    "azureFunctions.projectRuntime": "~2",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.preDeployTask": "npm prune"
 }
