@@ -7,8 +7,8 @@
  * Snippet: serverless-read
  */
 
-const conn = require("./../shared/utils");
-const handleError = require("./../shared/error");
+const conn = require("../shared/utils");
+const handleError = require("../shared/error");
 
 module.exports = function (context) {
     conn.connect().then(client => {
