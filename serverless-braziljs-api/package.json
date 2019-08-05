@@ -1,12 +1,20 @@
 {
   "name": "serverless-braziljs-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "Demo BrazilJs Conf 2019 - Azure Functions/Serverless",
   "scripts": {
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "mongodb": "^3.3.0-beta2"
+    "mongodb": "^3.0.10"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glaucia86/demos-braziljs2019.git"
+  },
+  "bugs": {
+    "url": "https://github.com/glaucia86/demos-braziljs2019/issues"
+  },
+  "homepage": "https://github.com/glaucia86/demos-braziljs2019#readme"
 }
