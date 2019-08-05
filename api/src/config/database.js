@@ -14,7 +14,7 @@ module.exports = {
   /* cosmosdb:
   {
     name: 'crud-demo-braziljs',
-    url: '<incluir-a-connection-string-cosmosDb>',
+    url: 'mongodb://<cosmosdb_name>:<primary_master_key>@<cosmosdb_name>.documents.azure.com:10255/crud-demo-braziljs?ssl=true',
     port: 10255,
   }, */
 };
