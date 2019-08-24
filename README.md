@@ -1,4 +1,4 @@
-# Demos Palestra: Criando API's Escaláveis com Node.js & Serverless - BrazilJs Conf 2019
+# Demos Palestra: Criando API's Escaláveis com Node.js & Arquitetura Serverless - BrazilJs Conf 2019
 
 <p align="center">
   <img src="https://i.postimg.cc/9F5m1Hb2/braziljs.png"/>  
@@ -57,6 +57,7 @@ E vòilá! :heart: :heart:
 
 Durante a live, comentei sobre importantes documentações, links e recursos que podem auxiliar o seu conhecimento sobre Serverless & Azure Functions
 
+- ✅ **[Slides palestra - Criando API's Escaláveis com Node.js & Arquitetura Serverless](http://bit.ly/slides-braziljs19)**
 - ✅ **[Azure para devs JavaScript & Node.js](https://docs.microsoft.com/pt-br/javascript/azure/?WT.mc_id=braziljs2019-github-gllemos&view=azure-node-latest)**
 - ✅ **[Documentação Azure Functions](https://docs.microsoft.com/pt-br/azure/azure-functions/?WT.mc_id=braziljs2019-github-gllemos)**
 - ✅ **[Criando a sua Primeira Função no Visual Studio Code](https://docs.microsoft.com/pt-br/azure/azure-functions/functions-create-first-function-vs-code?WT.mc_id=braziljs2019-github-gllemos)**
